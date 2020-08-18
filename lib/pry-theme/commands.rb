@@ -233,7 +233,7 @@ module PryTheme
     end
 
     def windows?
-      (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
+      Pry::Helpers::Platform.windows?
     end
 
     def install_theme(args)
